@@ -1,3 +1,6 @@
+@import url('https://fontlibrary.org//face/archicoco');
+
+
 :root {
   --green-50: hsl(141deg 75% 90%);
   --green-100: hsl(141deg 75% 85%);
@@ -59,9 +62,14 @@ img {
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 8px 20px;
+}
+.header__link h1 {
+  font-family: 'ArchicocoRegular', 'sans-serif';
+  font-weight: bold;
+  font-style: normal;
 }
 
 /* Main */
@@ -73,7 +81,7 @@ img {
   flex: 1;
   background-image: linear-gradient(
     to bottom,
-    var(--green-900),
+    #1FCF23,
     var(--green-1000)
   );
   display: flex;
