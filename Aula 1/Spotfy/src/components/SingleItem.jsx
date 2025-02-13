@@ -1,8 +1,7 @@
-import React from 'react';
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-
 
 const SingleItem = ({ id, name, image, banner, artist, idPath }) => {
   return (
@@ -16,10 +15,7 @@ const SingleItem = ({ id, name, image, banner, artist, idPath }) => {
           />
         </div>
 
-        <FontAwesomeIcon
-          className="single-item__icon"
-          icon={faCirclePlay}
-        />
+        <FontAwesomeIcon className="single-item__icon " icon={faCirclePlay} />
       </div>
 
       <div className="single-item__texts">
