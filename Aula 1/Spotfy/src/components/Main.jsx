@@ -18,13 +18,13 @@ const Main = ({ type }) => {
         <></>
       )}
 
-      {(type === "songs") | (type === undefined) ? (
+      {type === "songs" || type === undefined ? (
         <ItemList
           title="Músicas"
-          items={10}
+          items={15}
           itemsArray={songsArray}
           path="/songs"
-          idPath={"/song"}
+          idPath="/song"
         />
       ) : (
         <></>
@@ -32,4 +32,5 @@ const Main = ({ type }) => {
     </div>
   );
 };
+
 export default Main;

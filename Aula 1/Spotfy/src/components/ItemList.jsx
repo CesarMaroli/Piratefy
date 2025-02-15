@@ -5,8 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 const ItemList = ({ title, items, itemsArray, path, idPath }) => {
   const { pathname } = useLocation();
   const isHome = pathname === "/";
-  let finalItems = isHome ? 5 : Infinity;
-
+  const finalItems = isHome ? items : itemsArray.length;
 
   return (
     <div className="item-list">
@@ -21,10 +20,10 @@ const ItemList = ({ title, items, itemsArray, path, idPath }) => {
       </div>
       <div className="item-list__container">
         {itemsArray
-          .filter((currentValue, index) => index < finalItems)
+          .slice(0, finalItems)
           .map((currObj, index) => (
             <SingleItem
-            {...currObj}
+              {...currObj}
               idPath={idPath}
               key={`${title}-${index}`}
             />
